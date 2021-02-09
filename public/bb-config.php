@@ -2,7 +2,7 @@
 return array (
   'debug' => false,
   'salt' => '07bb6dd68757544ef4b8d6f935164470',
-  'url' => 'http://localhost/',
+  'url' => 'http://tes.monster/',
   'admin_area_prefix' => '/bb-admin',
   'sef_urls' => true,
   'timezone' => 'UTC',
