@@ -1,0 +1,120 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url('/assets/fonts/montserrat/Montserrat-Light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MontserratBlack;
+    src: url('/assets/fonts/montserrat/Montserrat-Black.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('/assets/fonts/roboto/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url('/assets/fonts/roboto/Roboto-Bold.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+
+body{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+header{
+    @apply font-bold;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+section{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+footer{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+
+.text-montserrat {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+.text-montserrat-black {
+    font-family: MontserratBlack, Arial, Helvetica, sans-serif;
+}
+.text-roboto {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+.text-roboto-bold {
+    font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
+
+.button-black {
+    @apply border-black;
+    @apply border-2;
+    @apply rounded-full;
+    @apply font-bold;
+    @apply py-2;
+    @apply px-4;
+}
+.button-blue {
+    @apply bg-blue-500;
+    @apply rounded-full;
+    @apply text-white;
+    @apply font-bold;
+    @apply py-2;
+    @apply px-4;
+}
+.button-black:focus,
+.button-black:active,
+.button-blue:focus,
+.button-blue:active {
+    @apply outline-none;
+}
+
+
+.feature-list {
+    @apply leading-10;
+}
+.feature-list>li{
+    @apply flex;
+    @apply items-center;
+}
+.feature-list>li::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url(/assets/svg/icon-check-green.svg);
+    background-size: cover;
+}
+
+
+.module-list{
+    @apply w-1/5;
+}
+
+
+.footer-gray{
+    @apply text-gray-300;
+    @apply text-sm;
+    background-color: #303030;
+}

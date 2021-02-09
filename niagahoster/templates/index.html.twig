@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NiagaHoster | Welcome</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <!-- Scripts -->
+    <script src="/assets/js/app.js"></script>
+</head>
+
+<body>
+
+    {% include 'blocks/header.html.twig' %}
+
+    <section class="border-b border-gray-200">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-center items-center">
+                <div class="flex-auto xl:flex-1 max-w-lg py-16">
+                    <div class="text-roboto-bold font-black text-4xl mb-8">PHP Hosting</div>
+                    <div class="text-3xl mb-8">Cepat, handal, penuh dengan modul PHP yang Anda butuhkan</div>
+                    <ul class="feature-list">
+                        <li>Solusi PHP untuk performa query yang lebih cepat.</li>
+                        <li>Konsumsi memori yang lebih rendah.</li>
+                        <li>Support PHP 5.3, PHP 5.4, PHP 5,5, PHP 5.6, PHP 7</li>
+                        <li>Fitur enkripsi lonCube dan Zend Guard Loaders</li>
+                    </ul>
+                </div>
+                <div class="flex-1 min-w-full xl:min-w-0 flex justify-center xl:justify-end py-8">
+                    <img class="max-w-xl" src="/assets/svg/illustration%20banner%20PHP%20hosting-01.svg" alt="PHP7" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="border-b border-gray-200">
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center mb-32">
+                <div class="flex flex-col lg:flex-row flex-wrap justify-center items-center py-16">
+                    <div class="flex-auto lg:flex-1 flex flex-col justify-end items-center mb-8">
+                        <div class="flex justify-center items-center w-48 h-48">
+                            <img class="w-48 h-auto" src="/assets/images/img-zendguard.jpg" alt="zendguard" />
+                        </div>
+                        <div>PHP Zend Guard Loader</div>
+                    </div>
+                    <div class="flex-auto lg:flex-1 flex flex-col justify-end items-center">
+                        <div class="flex justify-center items-center w-48 h-48">
+                            <img class="w-32 h-auto" src="/assets/images/img-composer.jpg" alt="composer" />
+                        </div>
+                        <div>PHP Composer</div>
+                    </div>
+                    <div class="flex-auto lg:flex-1 flex flex-col justify-end items-center">
+                        <div class="flex justify-center items-center w-48 h-48">
+                            <img class="w-48 h-auto" src="/assets/images/img-ioncube.jpg" alt="ioncube" />
+                        </div>
+                        <div>PHP ionCube Loader</div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-center py-16">
+                    <div class="text-roboto-bold font-black text-4xl">Paket Hosting Singapura yang Tepat</div>
+                    <div class="text-3xl">Diskon 40% + Domain dan SSL Gratis untuk Anda</div>
+                </div>
+                <div class="flex flex-col lg:flex-row justify-center items-start text-roboto">
+                    {% for item in config.packages %}
+                    <div class="relative text-center border rounded {{item.best_seller ? 'z-10 best-seller border-blue-500 border' : 'border-gray-200'}} mt-8">
+                        <div class="text-roboto-bold font-black text-2xl p-2 border-t border-b {{item.best_seller ? 'bg-blue-500 text-white border-blue-500' : '' }}">{{ item.title }}</div>
+                        <div class="text-montserrat p-2 border-b {{item.best_seller ? 'bg-blue-500 text-white border-blue-500' : '' }}">
+                            <div class="line-through">Rp {{ item.price_original // 1000 }}.{{ item.price_original % 1000 }}</div>
+                            <div class="flex items-start justify-center space-x-1"><span>Rp</span><span class="text-montserrat-black text-4xl font-black">{{ item.price // 1000 }}</span><span class="text-montserrat-black font-bold">.{{ item.price % 1000 }}</span>/ bln</div>
+                        </div>
+                        <div class="p-2 border-b {{item.best_seller ? 'bg-blue-600 text-white border-blue-500' : '' }}"><span class="font-bold">{{ item.jumlah_pengguna | number_format(0,',','.') }}</span> Pengguna Terdaftar</div>
+                        <div class="p-2 pt-8 border-b">
+                            <p class="font-bold">{{ item.feature_title }}</p>
+                            {% for feature in item.feature %}
+                            <p class="leading-10">{{ feature | parse_feature_detail | raw }}</p>
+                            {% endfor %}
+                            <button class="{{item.best_seller ? 'button-blue' : 'button-black'}} mt-16 mb-8">{{ item.button }}</button>
+                        </div>
+                        {% if item.best_seller %}
+                        <img class="absolute -top-2 -left-2" src="/assets/images/tag-best-seller.png" />
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center mb-16">
+                <div class="text-center text-3xl mb-16">Powerful dengan Limit PHP yang Lebih Besar</div>
+                <div class="flex flex-col lg:flex-row flex-wrap justify-center items-center text-center text-roboto w-full">
+                    <ul class="feature-list">
+                        <li class="p-2 pl-6 border border-gray-100"><span class="w-96">max execution time 300s</span></li>
+                        <li class="p-2 pl-6 border border-gray-200 bg-blue-50"><span class="w-96">max execution time 300s</span></li>
+                        <li class="p-2 pl-6 border border-gray-200"><span class="w-96">php memory limit 1024 MB</span></li>
+                    </ul>
+                    <div class="hidden xl:block w-8"></div>
+                    <ul class="feature-list">
+                        <li class="p-2 pl-6 border border-gray-200"><span class="w-96">post max size 128 MB</span></li>
+                        <li class="p-2 pl-6 border border-gray-200 bg-blue-50"><span class="w-96">upload max filesize 128 MB</span></li>
+                        <li class="p-2 pl-6 border border-gray-200"><span class="w-96">max input vars 2500</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center mb-16">
+                <div class="flex justify-center items-center h-16">
+                    <div class="h-1 w-16 bg-gray-200"></div>
+                </div>
+                <div class="text-center text-3xl mb-16">Semua Paket Hosting Sudah Termasuk</div>
+                <div class="flex flex-col lg:flex-row flex-wrap flex-between justify-center flex-wrap text-roboto">
+                    <div class="flex flex-col items-center mb-16">
+                        <div class="w-14 h-14 mb-6">
+                            <img src="/assets/svg/icon%20PHP%20Hosting_PHP%20Semua%20Versi.svg" title="php" />
+                        </div>
+                        <div class="text-roboto-bold text-xl">PHP Semua Versi</div>
+                        <div>Pilih mulai dari versi PHP 5.3 s/d PHP 7.</div>
+                        <div>Ubah sesuka Anda!</div>
+                    </div>
+                    <div class="hidden lg:block w-8"></div>
+                    <div class="flex flex-col items-center mb-16">
+                        <div class="w-14 h-14 mb-6">
+                            <img src="/assets/svg/icon%20PHP%20Hosting_My%20SQL.svg" title="mysql" />
+                        </div>
+                        <div class="text-roboto-bold text-xl">MySQL Versi 5.6</div>
+                        <div>Nikmati MySQL versi terbaru, tercepat dan</div>
+                        <div>kaya akan fitur</div>
+                    </div>
+                    <div class="hidden xl:block w-8"></div>
+                    <div class="flex flex-col items-center mb-16">
+                        <div class="w-14 h-14 mb-6">
+                            <img src="/assets/svg/icon%20PHP%20Hosting_CPanel.svg" title="cpanel" />
+                        </div>
+                        <div class="text-roboto-bold text-xl">Panel Hosting cPanel</div>
+                        <div>Kelola website dengan panel canggih yang</div>
+                        <div>familiar di hati Anda.</div>
+                    </div>
+                    <div class="hidden lg:block w-8"></div>
+                    <div class="flex flex-col items-center mb-16">
+                        <div class="w-14 h-14 mb-6">
+                            <img src="/assets/svg/icon%20PHP%20Hosting_garansi%20uptime.svg" title="garansi uptime 99%" />
+                        </div>
+                        <div class="text-roboto-bold text-xl">Garansi Uptime 99.9%</div>
+                        <div>Data center yang mendukung kelangsungan</div>
+                        <div>website Anda 24/7.</div>
+                    </div>
+                    <div class="hidden xl:block w-8"></div>
+                    <div class="flex flex-col items-center mb-16">
+                        <div class="w-14 h-14 mb-6">
+                            <img src="/assets/svg/icon%20PHP%20Hosting_InnoDB.svg" title="unlimited innodb" />
+                        </div>
+                        <div class="text-roboto-bold text-xl">Database InnoDB Unlimited</div>
+                        <div>Jumlah dan ukuran database yang tumbuh</div>
+                        <div>sesuai kebutuhan Anda.</div>
+                    </div>
+                    <div class="hidden lg:block w-8"></div>
+                    <div class="flex flex-col items-center mb-16">
+                        <div class="w-14 h-14 mb-6">
+                            <img src="/assets/svg/icon%20PHP%20Hosting_My%20SQL%20remote.svg" title="wildcard remote mysql" />
+                        </div>
+                        <div class="text-roboto-bold text-xl">Wildcard Remote MySQL</div>
+                        <div>Mendukung s/d 25 max_user_connections</div>
+                        <div>dan 100 max_connections.</div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center h-16">
+                    <div class="h-1 w-16 bg-gray-200"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="text-center text-3xl mb-8">Mendukung Penuh Framework Laravel</div>
+                <div class="flex flex-wrap justify-center items-center">
+                    <div class="flex-auto xl:flex-1 max-w-xl py-16">
+                        <div class="flex flex-col">
+                            <div class="mb-8">
+                                Tak perlu menggunakan dedicated server ataupun VPS yang mahal. Layanan PHP hosting murah kami mendukung penuh framework favorit Anda
+                            </div>
+                            <ul class="feature-list text-roboto mb-8">
+                                <li><span>Install Laravel <b>1 klik</b> dengan Softaculous Installer.</span></li>
+                                <li><span>Mendukung ekstensi <b>PHP MCrypt, phar, mbstring, json,</b> dan <b>fileinfo.</b></span></li>
+                                <li><span>Tersedia <b>Composer</b> dan <b>SSH</b> untuk menginstal packages pilihan Anda.</span></li>
+                            </ul>
+                            <div class=" text-xs mb-8">Nb. Composer dan SSH hanya tersedia pada paket Personal dan Bisnis</div>
+                            <div>
+                                <button class="button-blue">Pilih Hosting Anda</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 min-w-full xl:min-w-0 flex justify-center xl:justify-end py-8">
+                        <img class="max-w-xl" src="/assets/svg/illustration%20banner%20support%20laravel%20hosting.svg" alt="mbstring json phar" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center mb-16">
+                <div class="text-center text-3xl mt-16 mb-8">Modul Lengkap untuk Menjalankan Aplikasi PHP Anda.</div>
+                <div class="flex flex-wrap flex-between flex-wrap justify-center items-center text-sm mb-8">
+                    <ul>
+                        <li class="w-1/5">IcePHP</li>
+                        <li class="w-1/5">apc</li>
+                        <li class="w-1/5">apcu</li>
+                        <li class="w-1/5">apm</li>
+                        <li class="w-1/5">ares</li>
+                        <li class="w-1/5">bcmath</li>
+                        <li class="w-1/5">bcompiler</li>
+                        <li class="w-1/5">big_int</li>
+                        <li class="w-1/5">bitset</li>
+                        <li class="w-1/5">bloomy</li>
+                        <li class="w-1/5">bz2_filter</li>
+                        <li class="w-1/5">clamav</li>
+                        <li class="w-1/5">coin_acceptor</li>
+                        <li class="w-1/5">crack</li>
+                        <li class="w-1/5">dba</li>
+                    </ul>
+                    <div class="w-16 lg:w-24 xl:w-32 h-0"></div>
+                    <ul>
+                        <li class="w-1/5">http</li>
+                        <li class="w-1/5">huffman</li>
+                        <li class="w-1/5">idn</li>
+                        <li class="w-1/5">igbinary</li>
+                        <li class="w-1/5">imagick</li>
+                        <li class="w-1/5">imap</li>
+                        <li class="w-1/5">inclued</li>
+                        <li class="w-1/5">inotify</li>
+                        <li class="w-1/5">interbase</li>
+                        <li class="w-1/5">intl</li>
+                        <li class="w-1/5">ioncube_loader</li>
+                        <li class="w-1/5">ioncube_loader_4</li>
+                        <li class="w-1/5">jsmin</li>
+                        <li class="w-1/5">json</li>
+                        <li class="w-1/5">ldap</li>
+                    </ul>
+                    <div class="w-16 lg:w-24 xl:w-32 h-0"></div>
+                    <ul>
+                        <li class="w-1/5">nd_pdo_mysql</li>
+                        <li class="w-1/5">oauth</li>
+                        <li class="w-1/5">oci8</li>
+                        <li class="w-1/5">odbc</li>
+                        <li class="w-1/5">opcache</li>
+                        <li class="w-1/5">pdf</li>
+                        <li class="w-1/5">pdo</li>
+                        <li class="w-1/5">pdo_dblib</li>
+                        <li class="w-1/5">pdo_firebird</li>
+                        <li class="w-1/5">pdo_mysql</li>
+                        <li class="w-1/5">pdo_odbc</li>
+                        <li class="w-1/5">pdo_pgsql</li>
+                        <li class="w-1/5">pdo_sqlite</li>
+                        <li class="w-1/5">pgsql</li>
+                        <li class="w-1/5">phalcon</li>
+                    </ul>
+                    <div class="w-16 lg:w-24 xl:w-32 h-0"></div>
+                    <ul>
+                        <li class="w-1/5">stats</li>
+                        <li class="w-1/5">stem</li>
+                        <li class="w-1/5">stomp</li>
+                        <li class="w-1/5">suhosin</li>
+                        <li class="w-1/5">sybase_ct</li>
+                        <li class="w-1/5">sysvmsg</li>
+                        <li class="w-1/5">sysvsem</li>
+                        <li class="w-1/5">sysvshm</li>
+                        <li class="w-1/5">tidy</li>
+                        <li class="w-1/5">timezonedb</li>
+                        <li class="w-1/5">trader</li>
+                        <li class="w-1/5">translit</li>
+                        <li class="w-1/5">uploadprogress</li>
+                        <li class="w-1/5">uri_template</li>
+                        <li class="w-1/5">uuid</li>
+                    </ul>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <button class="button-black">Selengkapnya</button>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-end">
+                <div class="flex-auto xl:flex-1 max-w-lg pt-16">
+                    <div class="text-3xl mb-8">Linux Hosting yang Stabil <br />dengan Teknologi LVE</div>
+                    <div class="mb-8">
+                        SuperMicro <span>Intel Xeon 24-Cores</span> server dengan <span>RAM 128 GB</span> dan teknologi <span>LVE CloudLinux</span> untuk stabilitas server Anda. Dilengkapi dengan <span>SSD</span> untuk kecepatan <span>MySQL</span> dan caching, Apache load balancer berbasis LiteSpeed Technologies, <span>CageFS</span> security, <span>Raid-10</span> protection dan auto backup untuk keamanan website PHP Anda.
+                    </div>
+                    <div class="mb-16">
+                        <button class="button-blue">Pilih Hosting Anda</button>
+                    </div>
+                </div>
+                <div class="flex-1 min-w-full xl:min-w-0 flex justify-center items-end xl:justify-end pt-8">
+                    <img class="max-w-xl" src="/assets/images/Image support.png" alt="customer service" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'blocks/footer.html.twig' %}
+
+</body>
+
+</html>

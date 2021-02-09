@@ -1,0 +1,23 @@
+{
+  "name": "niagahoster",
+  "version": "1.0.0",
+  "description": "Implementasi mockup website",
+  "main": "index.js",
+  "scripts": {
+    "prod": "cross-env NODE_ENV=production npm run build",
+    "dev": "npm run build",
+    "build": "npm run postcss",
+    "postcss": "npx tailwindcss-cli@latest build ./templates/assets/css/app.css -o public/assets/css/app.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hot":"symfony server:start --port=8080 --no-tls -d && browser-sync start --proxy \"http://127.0.0.1:8080/\" --files \"templates\" \"public\""
+  },
+  "author": "Andi Suryono",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {}
+}

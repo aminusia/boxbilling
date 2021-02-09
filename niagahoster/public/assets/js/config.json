@@ -1,0 +1,84 @@
+{
+    "packages": [
+        {
+            "title": "Bayi",
+            "best_seller": false,
+            "price_original": 19900,
+            "price": 14900,
+            "jumlah_pengguna": 938,
+            "feature_title": "0.5X RESOURCE POWER",
+            "feature": [
+                "500 MB: Disk Space",
+                "Unlimited: Bandwidth",
+                "Unlimited: Databases",
+                "1: Domain",
+                "Instant: Backup",
+                "Unlimited SSL: Gratis Selamanya"
+            ],
+            "button": "Pilih Sekarang"
+        },
+        {
+            "title": "Pelajar",
+            "best_seller": false,
+            "price_original": 46900,
+            "price": 23450,
+            "jumlah_pengguna": 4168,
+            "feature_title": "1X RESOURCE POWER",
+            "feature": [
+                "Unlimited: Disk Space",
+                "Unlimited: Bandwidth",
+                "Unlimited: POP3 Email",
+                "Unlimited: Databases",
+                "10: Addon Domains",
+                "Instant: Backup",
+                "Domain Gratis: Selamanya",
+                "Unlimited SSL: Gratis Selamanya"
+            ],
+            "button": "Pilih Sekarang"
+        },
+        {
+            "title": "Personal",
+            "best_seller": true,
+            "price_original": 58900,
+            "price": 38900,
+            "jumlah_pengguna": 10017,
+            "feature_title": "2X RESOURCE POWER",
+            "feature": [
+                "Unlimited: Disk Space",
+                "Unlimited: Bandwidth",
+                "Unlimited: POP3 Email",
+                "Unlimited: Databases",
+                "Unlimited: Addon Domains",
+                "Instant: Backup",
+                "Domain Gratis: Selamanya",
+                "Unlimited SSL: Gratis Selamanya",
+                "Private: Name Server",
+                "SpamAssasin: Mail Protection"
+            ],
+            "button": "Pilih Sekarang"
+        },
+        {
+            "title": "Bisnis",
+            "best_seller": false,
+            "price_original": 109900,
+            "price": 65900,
+            "jumlah_pengguna": 3552,
+            "feature_title": "3X RESOURCE POWER",
+            "feature": [
+                "Unlimited: Disk Space",
+                "Unlimited: Bandwidth",
+                "Unlimited: POP3 Email",
+                "Unlimited: Databases",
+                "Unlimited: Addon Domains",
+                "Magic Auto: Backup & Restore",
+                "Domain Gratis: Selamanya",
+                "Unlimited SSL: Gratis Selamanya",
+                "Private: Name Server",
+                "Prioritas: Layanan Support",
+                "::★★★★★",
+                "SpamExpert: Pro Mail Protection"
+            ],
+            "button": "Diskon 40%"
+        }
+    ]
+}
