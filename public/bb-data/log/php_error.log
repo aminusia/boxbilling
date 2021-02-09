@@ -1,0 +1,17 @@
+[09-Feb-2021 09:59:33 UTC] Page  not found
+[09-Feb-2021 10:00:03 UTC] Page  not found
+[09-Feb-2021 10:14:37 UTC] Page  not found
+[09-Feb-2021 10:25:36 UTC] Page  not found
+[09-Feb-2021 10:40:14 UTC] 8 Undefined property: Box_Di::$_get /var/www/public/index.php 17
+[09-Feb-2021 10:40:14 UTC] 8 Trying to access array offset on value of type null /var/www/public/index.php 17
+[09-Feb-2021 10:40:14 UTC] 8 Undefined property: Box_Di::$_get /var/www/public/index.php 17
+[09-Feb-2021 10:40:14 UTC] 8 Trying to access array offset on value of type null /var/www/public/index.php 17
+[09-Feb-2021 10:40:28 UTC] 8 Undefined property: Box_Di::$_url /var/www/public/index.php 17
+[09-Feb-2021 10:40:28 UTC] 8 Undefined property: Box_Di::$_url /var/www/public/index.php 17
+[09-Feb-2021 10:42:03 UTC] Call to undefined method Box_Di::getURI()
+[09-Feb-2021 10:42:03 UTC] Call to undefined method Box_Di::getURI()
+[09-Feb-2021 10:42:03 UTC] Call to undefined method Box_Di::getURI()
+[09-Feb-2021 10:42:40 UTC] 8 Undefined property: Box_Request::$_url /var/www/public/index.php 17
+[09-Feb-2021 10:42:40 UTC] 8 Undefined property: Box_Request::$_url /var/www/public/index.php 17
+[09-Feb-2021 10:43:39 UTC] Unable to find template "mod_page_favicon.ico" (looked into: /var/www/public/bb-themes/boxbilling/html, /var/www/public/bb-modules/Page/html_client).
+[09-Feb-2021 10:43:39 UTC] Page /favicon.ico not found

@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/boxbilling/boxbilling/releases/
+HostUrl=https://github-releases.githubusercontent.com/3245790/5fce2600-3309-11eb-8be9-ca8afd079674?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210209T073446Z&X-Amz-Expires=300&X-Amz-Signature=7d703e807a8f4ba64fe43bb4f5e545f2ede6a09c423638c293e9263be653e509&X-Amz-SignedHeaders=host&actor_id=523914&key_id=0&repo_id=3245790&response-content-disposition=attachment%3B%20filename%3DBoxBilling.zip&response-content-type=application%2Foctet-stream
